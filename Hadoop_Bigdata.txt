@@ -1,0 +1,27 @@
+Big data:  The data that are huge volume of data that are complex to dealt
+ with by traditional data processing application software.
+
+Disadvantages of big data
+1. Storage issue
+2. process
+3. Transfer
+
+Features of Big data
+1. Volume: Data may contain big size 
+2. Velocity: it says about Speed of the data is more
+3. Veracity:Quality of data
+4. Veriety: structure/ unstructure/ semi structure data
+5. volume: Meaning full data
+
+To overcome this disadvantage Hadoop is come in to picture
+Hadoop: it is distributed cluster computing
+
+it has following components
+1. YARN: Yet Another Resource Negotiation
+2. HDFS: Hadoop Distributed File System 
+   it has two components Name node and data node
+   
+3. Map-Reduce: task(map, reduce, sort)
+
+
+
