@@ -22,9 +22,9 @@ SELECT * FROM EMPLOYEE;
 SELECT DISTINCT EMPLOYEE_ID FROM EMPLOYEE;
 
 --2. How to delete DUPLICATE records from a table using a SQL Query?
-select first_name,email,count(*) 
-from customers
-group by first_name,email
+select NAME, EMPLOYEE_ID,count(*) 
+from EMPLOYEE
+group by NAME, EMPLOYEE_ID
 having count(*)>1
 
 
@@ -35,6 +35,7 @@ from EMPLOYEE LIMIT 5;
 --4. How to read LAST 5 records from a table using a SQL query?
 
 SELECT * FROM EMPLOYEE ORDER BY EMPLOYEE_ID DESC LIMIT 5;
+
 --5. What is the result of Normal Join, Left Outer Join, Right Outer Join and Full Outer Join between the tables A & B?
 
 NORMAL JOIN(INNER): Returns all mathched record from  left or right table
@@ -45,11 +46,11 @@ FULL (OUTER) JOIN : Returns all records when there is a match in either left or 
 
 --6. How to find the employee with second MAX Salary using a SQL query?
  
-SELECT SALARY FROM
-(SELECT SALARY, DENSE_RANK() OVER(ORDER BY SALARY)AS DENSE_RANK FROM EMPLOYEE) AS T
+SELECT * FROM
+(SELECT NAME, SALARY, DENSE_RANK() OVER(ORDER BY SALARY)AS DENSE_RANK FROM EMPLOYEE) AS T
 WHERE T.DENSE_RANK = 2;
 
 --7. How to find the employee with third MAX Salary using a SQL query without using Analytic Functions?
 SELECT * FROM
-(SELECT SALARY, DENSE_RANK() OVER(ORDER BY SALARY)AS DENSE_RANK FROM EMPLOYEE) AS T
+(SELECT NAME SALARY, DENSE_RANK() OVER(ORDER BY SALARY)AS DENSE_RANK FROM EMPLOYEE) AS T
 WHERE T.DENSE_RANK = 3;
